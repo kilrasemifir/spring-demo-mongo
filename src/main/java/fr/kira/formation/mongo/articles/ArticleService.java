@@ -2,6 +2,7 @@ package fr.kira.formation.mongo.articles;
 
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -14,6 +15,7 @@ public class ArticleService {
     }
 
     public Article save(Article article) {
+        article.setDateCreation(LocalDateTime.now());
         return articleRepository.save(article);
     }
 
