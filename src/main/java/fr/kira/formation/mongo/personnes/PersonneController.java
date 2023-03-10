@@ -26,7 +26,7 @@ public class PersonneController {
     }
 
     @GetMapping("{id}")
-    public Optional<Personne> findById(@PathVariable String s) {
+    public Personne findById(@PathVariable String s) {
         return personneService.findById(s);
     }
 
