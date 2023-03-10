@@ -36,4 +36,11 @@ public class ArticleController {
     public void deleteById(@PathVariable String id) {
         articleService.deleteById(id);
     }
+
+    @PostMapping("{id}/commentaires")
+    public Commentaire postNouveauCommentaire(
+            @PathVariable String id,
+            @RequestBody Commentaire commentaire){
+        return this.articleService.postNouveauCommentaire(id, commentaire);
+    }
 }

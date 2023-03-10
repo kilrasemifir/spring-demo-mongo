@@ -1,5 +1,6 @@
 package fr.kira.formation.mongo.auteurs;
 
+import fr.kira.formation.mongo.articles.Commentaire;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -31,4 +32,6 @@ public class AuteurController {
     public Auteur save(@RequestBody Auteur entity) {
         return auteurService.save(entity);
     }
+
+
 }

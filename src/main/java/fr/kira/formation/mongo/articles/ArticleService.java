@@ -13,4 +13,16 @@ public class ArticleService extends CRUDService<Article> {
         super(articleRepository);
     }
 
+    /**
+     * Ajoute un commentaire à un article.
+     * @param id de l'article
+     * @param commentaire à ajouter
+     * @return le commentaire ajouté.
+     */
+    public Commentaire postNouveauCommentaire(String id, Commentaire commentaire) {
+        Article article = this.findById(id);
+        article.getCommentaires().add(commentaire);
+        this.save(article);
+        return commentaire;
+    }
 }
