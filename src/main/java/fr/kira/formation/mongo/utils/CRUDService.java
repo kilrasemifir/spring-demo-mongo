@@ -35,7 +35,9 @@ public abstract class CRUDService<T> {
      * @return l'entité correspondante à l'id.
      */
     public T findById(String id){
-        return this.repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Document non trouvé"));
+        return this.repository.findById(id).orElseThrow(
+                () -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Document non trouvé")
+        );
     }
 
     /**

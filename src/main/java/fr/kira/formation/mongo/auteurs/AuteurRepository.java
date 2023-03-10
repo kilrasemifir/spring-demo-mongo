@@ -7,7 +7,5 @@ import java.util.Optional;
 
 public interface AuteurRepository extends MongoRepository<Auteur, String> {
 
-    List<Auteur> findAllByAuteurIsTrue();
-    Optional<Auteur> findByIdAndAuteurIsTrue(String id);
 
 }

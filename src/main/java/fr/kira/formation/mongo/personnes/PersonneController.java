@@ -26,12 +26,12 @@ public class PersonneController {
     }
 
     @GetMapping("{id}")
-    public Personne findById(@PathVariable String s) {
-        return personneService.findById(s);
+    public Personne findById(@PathVariable String id) {
+        return personneService.findById(id);
     }
 
     @DeleteMapping("{id}")
-    public void deleteById(@PathVariable String s) {
-        personneService.deleteById(s);
+    public void deleteById(@PathVariable String id) {
+        personneService.deleteById(id);
     }
 }
