@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@Document
+@Document(collection = "personnes")
 public class Personne {
     @Id
     private String id;

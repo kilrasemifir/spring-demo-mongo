@@ -1,0 +1,16 @@
+{
+  "nom": "Toto",
+  "conjoint": {
+    "nom": "Tata",
+    "conjoint": {
+      "nom": "Titi",
+      "conjoint": {
+        "nom": "Tutu",
+        "conjoint": {
+          "nom": "Toto",
+
+        }
+      }
+    }
+  }
+}
